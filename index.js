@@ -3,16 +3,10 @@ const bcrypt = require('bcryptjs')
 const { getTasksByUserId, addTask, addUser, updateTaskByTaskId, deleteTaskByTaskId, getUserByEmail, getTaskByTaskId } = require('./db.js')
 const fetchuser = require('./fetchuser.js');
 const jwt = require('jsonwebtoken')
-const port = 5000;
-const JWT_SECRET = 'navleensandhu11'
-const cors = require("cors");
-
-const corsOptions = {
-    origin: "http://localhost:3000",
-};
+const port = process.env.PORT;
+const JWT_SECRET = process.env.SECRET
 
 const app = express();
-app.use(cors(corsOptions));
 
 function isValidPassword(password) {
     // for checking if password length is between 8 and 15

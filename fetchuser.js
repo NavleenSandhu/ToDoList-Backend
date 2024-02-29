@@ -4,7 +4,7 @@ function fetchuser(req, res, next) {
     if (!token) {
         res.status(403).json({ Forbidden: "Not Logged In" })
     } else {
-        const data = jwt.verify(token, 'navleensandhu11')
+        const data = jwt.verify(token, process.env.SECRET)
         req.user = data.user
         next()
     }
