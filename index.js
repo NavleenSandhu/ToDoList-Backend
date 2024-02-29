@@ -3,8 +3,9 @@ const bcrypt = require('bcryptjs')
 const { getTasksByUserId, addTask, addUser, updateTaskByTaskId, deleteTaskByTaskId, getUserByEmail, getTaskByTaskId } = require('./db.js')
 const fetchuser = require('./fetchuser.js');
 const jwt = require('jsonwebtoken')
-const port = process.env.PORT;
-const JWT_SECRET = process.env.SECRET
+const port = 5000;
+const JWT_SECRET = 'navleensandhu11'
+
 
 const app = express();
 
