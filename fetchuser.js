@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+
 function fetchuser(req, res, next) {
     const token = req.header('token')
     if (!token) {
