@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken')
 const port = 5000;
 const JWT_SECRET = 'navleensandhu11'
 
-
 const app = express();
 
 function isValidPassword(password) {
